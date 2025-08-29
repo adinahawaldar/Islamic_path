@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Islamic Dua Guide</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+             <li><a href="#names-of-allah">99 Names</a></li>
+            <li><a href="#dua-library">Dua Library</a></li>
+            <li><a href="#support">Support</a></li>
+            <li><a href="#islamic-knowledge">Knowledge</a></li>
+
+            <li><a href="#journal">Journal</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+    </nav>
+
+
+
+    <section id="home">
+        <div class="welcome-text">
+            <h1>Islamic Dua Guide</h1>
+            <p>Find comfort and guidance through authentic Islamic supplications for every situation in life.</p>
+        </div>
+        
+        <div class="random-dua-card">
+            <h3>Dua of the Day</h3>
+            <p class="dua-text" id="random-dua-text">رَبَّنَا آتِنَا فِي الدُّنْيَا حَسَنَةً وَفِي الْآخِرَةِ حَسَنَةً وَقِنَا عَذَابَ النَّارِ</p>
+            <p class="dua-translation" id="random-dua-translation">"Our Lord, give us in this world [that which is] good and in the Hereafter [that which is] good and protect us from the punishment of the Fire."</p>
+            <button class="refresh-btn" id="refresh-dua">New Dua <i class="fas fa-sync-alt"></i></button>
+        </div>
+    </section>
+
+
+
+    <section id="names-of-allah">
+        <h2 class="section-title">99 Names of Allah</h2>
+        <p style="text-align: center; margin-bottom: 2rem; max-width: 800px; margin-left: auto; margin-right: auto;">
+            The Beautiful Names of Allah remind us of Allah's attributes and help us better understand and connect with our Creator.
+        </p>
+        
+        <div class="names-container" id="names-container">
+        </div>
+        
+        <button class="show-more-btn" id="show-more-btn">Show All Names</button>
+    </section>
+
+
+
+
+
+    <section id="dua-library">
+        <h2 class="section-title">Dua Library</h2>
+        
+        <div class="category-buttons">
+            <button class="category-btn active" data-category="all">All</button>
+            <button class="category-btn" data-category="sad">Sad</button>
+            <button class="category-btn" data-category="worried">Worried</button>
+            <button class="category-btn" data-category="thankful">Thankful</button>
+            <button class="category-btn" data-category="daily">Daily Life</button>
+        </div>
+        
+        <div class="duas-container" id="duas-container">
+        </div>
+    </section>
+
+
+
+
+
+    <section id="support">
+        <h2 class="section-title">Support</h2>
+        <p class="support-desc">Select how you're feeling today to receive a relevant dua and message from Quran or Hadith.</p>
+        
+        <select class="feeling-select" id="feeling-select">
+            <option value="">-- How are you feeling today? --</option>
+            <option value="sad">Sad</option>
+            <option value="anxious">Anxious/Worried</option>
+            <option value="grateful">Grateful/Thankful</option>
+            <option value="stressed">Stressed</option>
+            <option value="hopeless">Hopeless</option>
+            <option value="fearful">Fearful</option>
+        </select>
+        
+        <div class="support-result" id="support-result">
+            <h3 id="result-title">Dua for When You're Feeling Sad</h3>
+            <p class="dua-text" id="result-dua"></p>
+            <p class="dua-translation" id="result-translation"></p>
+            <p id="result-message"></p>
+        </div>
+    </section>
+
+
+     <div class="container">
+        <section id="islamic-knowledge">
+            <h2 class="section-title">Islamic Knowledge</h2>
+            
+            <div class="knowledge-cards">
+                <div class="knowledge-card">
+                    <h3><i class="fas fa-hands-praying"></i> Etiquettes of Dua</h3>
+                    <p>Begin with praising Allah and sending blessings upon the Prophet Muhammad (PBUH). Face the Qibla, raise your hands, and ask with sincerity and certainty that Allah will respond.</p>
+                </div>
+                
+                <div class="knowledge-card">
+                    <h3><i class="fas fa-clock"></i> Best Times for Dua</h3>
+                    <p>The last third of the night, between Adhan and Iqamah, during rainfall, while traveling, while prostrating in prayer, and on Friday after Asr until sunset.</p>
+                </div>
+                
+                <div class="knowledge-card">
+                    <h3><i class="fas fa-scale-balanced"></i> Conditions for Acceptance</h3>
+                    <p>Dua is more likely to be accepted when accompanied by good deeds, halal sustenance, and a heart free from negligence. Avoid haste and have firm belief in Allah's response.</p>
+                </div>
+                
+                <div class="knowledge-card">
+                    <h3><i class="fas fa-hand-holding-heart"></i> How to Make Dua</h3>
+                    <p>Speak with humility, lower your voice, use comprehensive phrases, and make dua for yourself before others. Repeat your request three times and end with praise of Allah.</p>
+                </div>
+                
+                <div class="knowledge-card">
+                    <h3><i class="fas fa-ban"></i> What to Avoid in Dua</h3>
+                    <p>Avoid making dua for harm against others, for sin, or for severing family ties. Don't be impatient for a response, and never consider your dua too insignificant.</p>
+                </div>
+                
+                <div class="knowledge-card">
+                    <h3><i class="fas fa-quran"></i> Dua in the Quran</h3>
+                    <p>Allah says: "Call upon Me; I will respond to you." (Quran 40:60). The Quran contains numerous examples of prophetic duas that we can incorporate in our own supplications.</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+    
+
+
+    <div class="container-story">
+        <section id="islamic-stories">
+            <h2 class="section-title">Islamic Stories</h2>
+            
+            <div class="stories-container">
+                <div class="story-card">
+                    <h3>Patience of Prophet Ayyub (Job)</h3>
+                    <div class="short-content">
+                        Despite being tested with severe illness and loss of wealth and family, Prophet Ayyub remained patient and faithful to Allah...
+                    </div>
+                    <div class="full-content">
+                        <p>Despite being tested with severe illness and loss of wealth and family, Prophet Ayyub remained patient and faithful to Allah. His story teaches us the virtue of patience during hardships.</p>
+                        <p>For years, he suffered from a painful skin disease that made people avoid him. Yet he never complained against Allah's decree. He continuously prayed: "Indeed, adversity has touched me, and you are the Most Merciful of the merciful." (Quran 21:83)</p>
+                        <p>Allah eventually healed him and restored his wealth and family, showing that patience through trials leads to great reward.</p>
+                    </div>
+                    <div class="read-more">Read more <i class="fas fa-chevron-down"></i></div>
+                </div>
+                
+                <div class="story-card">
+                    <h3>Trust in Allah - Story of Prophet Ibrahim</h3>
+                    <div class="short-content">
+                        When Prophet Ibrahim was thrown into the fire by his people, he placed his complete trust in Allah, who commanded the fire to be cool and safe for him...
+                    </div>
+                    <div class="full-content">
+                        <p>When Prophet Ibrahim was thrown into the fire by his people, he placed his complete trust in Allah, who commanded the fire to be cool and safe for him. This story shows the power of tawakkul (reliance on Allah).</p>
+                        <p>As he was being catapulted into the flames, Angel Jibreel appeared to him and asked if he needed help. Ibrahim replied: "If Allah knows about my situation, that is sufficient for me."</p>
+                        <p>Allah then said: "O fire, be coolness and safety upon Ibrahim." (Quran 21:69) The fire immediately lost its heat, and Ibrahim emerged unharmed, strengthening the faith of believers for generations to come.</p>
+                    </div>
+                    <div class="read-more">Read more <i class="fas fa-chevron-down"></i></div>
+                </div>
+                
+                <div class="story-card">
+                    <h3>The Mercy of Prophet Muhammad (PBUH)</h3>
+                    <div class="short-content">
+                        When the people of Ta'if threw stones at him until he bled, the angel Gabriel came to him and offered to destroy the city. Instead of seeking vengeance, the Prophet prayed for their guidance...
+                    </div>
+                    <div class="full-content">
+                        <p>When the people of Ta'if threw stones at him until he bled, the angel Gabriel came to him and offered to destroy the city. Instead of seeking vengeance, the Prophet prayed for their guidance.</p>
+                        <p>After suffering this terrible treatment, the Prophet made a humble dua: "O Allah, I complain to You of my weakness, my scarcity of resources and the humiliation I have been subjected to by the people. O Most Merciful of those who are merciful. O Lord of the weak and my Lord too. To whom have you entrusted me?"</p>
+                        <p>He then added: "So long as You are not angry with me, I do not care. Your favor is of a more expansive relief to me. I seek refuge in the light of Your Countenance by which all darkness is dispelled and every affair of this world and the next is set right, lest Your anger should descend upon me or Your displeasure light upon me. I need only Your pleasure and satisfaction for only You enable me to do good and avoid evil."</p>
+                    </div>
+                    <div class="read-more">Read more <i class="fas fa-chevron-down"></i></div>
+                </div>
+                
+                <div class="story-card">
+                    <h3>Honesty of Prophet Yusuf</h3>
+                    <div class="short-content">
+                        Despite being betrayed by his brothers, sold into slavery, and imprisoned unjustly, Prophet Yusuf remained honest and trustworthy...
+                    </div>
+                    <div class="full-content">
+                        <p>Despite being betrayed by his brothers, sold into slavery, and imprisoned unjustly, Prophet Yusuf remained honest and trustworthy throughout his trials.</p>
+                        <p>When he was in charge of Egypt's food storage during seven years of famine, he could have easily taken advantage of his position. Instead, he meticulously measured and distributed the grain with perfect honesty.</p>
+                        <p>When his brothers came to Egypt seeking food, he tested them and eventually revealed his identity, saying: "No blame will there be upon you today. Allah will forgive you; and He is the most merciful of the merciful." (Quran 12:92)</p>
+                        <p>His story demonstrates that honesty and integrity in all circumstances lead to Allah's reward and eventual victory.</p>
+                    </div>
+                    <div class="read-more">Read more <i class="fas fa-chevron-down"></i></div>
+                </div>
+                
+                <div class="story-card">
+                    <h3>Faith of Asiyah, Wife of Pharaoh</h3>
+                    <div class="short-content">
+                        Asiyah, the wife of the tyrant Pharaoh, secretly believed in Allah despite living in the palace of the greatest enemy of God...
+                    </div>
+                    <div class="full-content">
+                        <p>Asiyah, the wife of the tyrant Pharaoh, secretly believed in Allah despite living in the palace of the greatest enemy of God. Her story is one of incredible courage and faith.</p>
+                        <p>When she declared her faith, Pharaoh tortured her brutally, but she never renounced her belief. During her torture, she prayed: "My Lord, build for me near You a house in Paradise and save me from Pharaoh and his deeds and save me from the wrongdoing people." (Quran 66:11)</p>
+                        <p>Allah answered her prayer, and she died as a martyr. The Prophet Muhammad (PBUH) mentioned her as one of the four perfected women in Islam, alongside Maryam, Khadijah, and Fatimah.</p>
+                    </div>
+                    <div class="read-more">Read more <i class="fas fa-chevron-down"></i></div>
+                </div>
+                
+                <div class="story-card">
+                    <h3>Wisdom of Luqman</h3>
+                    <div class="short-content">
+                        Luqman was a wise man mentioned in the Quran who gave profound advice to his son about gratitude, worship, and good character...
+                    </div>
+                    <div class="full-content">
+                        <p>Luqman was a wise man mentioned in the Quran who gave profound advice to his son about gratitude, worship, and good character.</p>
+                        <p>Among his advice was: "O my son, do not associate [anything] with Allah. Indeed, association [with him] is great injustice." (Quran 31:13)</p>
+                        <p>He also taught: "O my son, indeed if it [a deed] should be the weight of a mustard seed and should be within a rock or [anywhere] in the heavens or in the earth, Allah will bring it forth. Indeed, Allah is Subtle and Aware." (Quran 31:16)</p>
+                        <p>Luqman advised his son to establish prayer, enjoin what is right, forbid what is wrong, and be patient with what befalls him. He also counseled him against arrogance: "And do not turn your cheek [in contempt] toward people and do not walk through the earth exultantly. Indeed, Allah does not like everyone self-deluded and boastful." (Quran 31:18)</p>
+                    </div>
+                    <div class="read-more">Read more <i class="fas fa-chevron-down"></i></div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+
+
+
+
+<div class="container-img">
+        <section id="islamic-gallery">
+            <h2 class="section-title">My Islamic Journey</h2>
+            <p class="gallery-intro">
+                These are personal photographs from my spiritual journey to Saudi Arabia. Each image holds special memories of visiting Islam's holiest sites.
+            </p>
+            
+            <div class="gallery-container">
+                <div class="gallery-item" data-index="0">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, #1a3a4a 0%, #2a6e50 100%);display:flex;justify-content:center;align-items:center;color:white;font-size:24px;">
+                        <i class="fas fa-kaaba" style="font-size:48px;margin-right:15px;"></i>
+                        <span>Kaaba Image</span>
+                    </div>
+                    <div class="gallery-caption">Masjid al-Haram, Mecca</div>
+                </div>
+                
+                <div class="gallery-item" data-index="1">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, #d9b44a 0%, #2a6e50 100%);display:flex;justify-content:center;align-items:center;color:white;font-size:24px;">
+                        <i class="fas fa-mosque" style="font-size:48px;margin-right:15px;"></i>
+                        <span>Al-Masjid an-Nabawi</span>
+                    </div>
+                    <div class="gallery-caption">The Prophet's Mosque, Medina</div>
+                </div>
+                
+                <div class="gallery-item" data-index="2">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, #8e7d5b 0%, #1a3a4a 100%);display:flex;justify-content:center;align-items:center;color:white;font-size:24px;">
+                        <i class="fas fa-mountain" style="font-size:48px;margin-right:15px;"></i>
+                        <span>Mount Uhud</span>
+                    </div>
+                    <div class="gallery-caption">Historical site of the Battle of Uhud</div>
+                </div>
+                
+                <div class="gallery-item" data-index="3">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, #4a9e79 0%, #1a3a4a 100%);display:flex;justify-content:center;align-items:center;color:white;font-size:24px;">
+                        <i class="fas fa-book-quran" style="font-size:48px;margin-right:15px;"></i>
+                        <span>Holy Quran</span>
+                    </div>
+                    <div class="gallery-caption">The Holy Quran in Medina</div>
+                </div>
+                
+                <div class="gallery-item" data-index="4">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, #2a6e50 0%, #d9b44a 100%);display:flex;justify-content:center;align-items:center;color:white;font-size:24px;">
+                        <i class="fas fa-tree" style="font-size:48px;margin-right:15px;"></i>
+                        <span>Date Palms</span>
+                    </div>
+                    <div class="gallery-caption">Date palms in Medina</div>
+                </div>
+                
+                <div class="gallery-item" data-index="5">
+                    <div style="width:100%;height:100%;background:linear-gradient(135deg, #d9b44a 0%, #8e7d5b 100%);display:flex;justify-content:center;align-items:center;color:white;font-size:24px;">
+                        <i class="fas fa-paint-brush" style="font-size:48px;margin-right:15px;"></i>
+                        <span>Islamic Art</span>
+                    </div>
+                    <div class="gallery-caption">Traditional Islamic calligraphy and patterns</div>
+                </div>
+            </div>
+            
+            <
+        </section>
+    </div>
+
+    <div class="modal" id="imageModal">
+        <span class="close-btn" id="closeModal">&times;</span>
+        <span class="nav-btn prev-btn" id="prevBtn">&#10094;</span>
+        <span class="nav-btn next-btn" id="nextBtn">&#10095;</span>
+        <div class="modal-content-container">
+            <img class="modal-content" id="modalImage" src="">
+            <div class="modal-caption" id="modalCaption"></div>
+        </div>
+    </div>
+
+
+
+
+
+
+<div class="container-about">
+        <section id="about">
+            <h2 class="section-title-about">About This Project</h2>
+            
+            <div class="profile-flex">
+                <div class="profile-img">
+                    <i class="fas fa-user"></i>
+                </div>
+                <div class="profile-info">
+                    <h2>Adina Hawaldar</h2>
+                    <div class="title">Web Designer & Developer</div>
+                    <p>I love crafting beautiful, functional designs that create meaningful user experiences. This project combines my passion for design with my love for Islamic knowledge.</p>
+                    <div class="social-flex">
+                        <a href="#" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="social-link">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            
+     
+
+
+    
+
+    <footer>
+        <p>© 2023 Islamic Dua Guide. All rights reserved.</p>
+    </footer>
+<script src="app.js"></script>
+   
+</body>
+</html>
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
