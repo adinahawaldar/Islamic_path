@@ -92,31 +92,31 @@ document.addEventListener('DOMContentLoaded', function() {
             const galleryItems = [
                 {
                     title: "Masjid al-Haram, Mecca",
-                    description: "The Great Mosque of Mecca with the Kaaba at its center.",
+                    description: "“Standing before the Kaaba is a feeling words can’t capture. Twice Allah blessed me with this chance, and both times my heart felt peace, gratitude, and closeness to Him.",
                             image: "assets/makkah.jpeg"
 
                 },
                 {
-                    title: "The Prophet's Mosque, Medina",
-                    description: "Al-Masjid an-Nabawi, the second holiest mosque in Islam.",
+                    title: "Masjid an-Nabawi",
+                    description: "Visiting Madinah fills the heart with peace. In the Prophet’s ﷺ city, every step feels like mercy and every moment feels lighter.",
                             image: "assets/madina.jpeg"
 
                 },
                 {
-                    title: "Mosque",
-                    description: "Al-Masjid an-Nabawi",
+                    title: "Masjid an-Nabawi",
+                    description: "Madinah is not just a place, it’s a feeling of calmness and love that stays in the heart forever.",
                     image: "assets/3.jpeg"
 
                 },
                 {
-                    title: "Mosque",
-                    description: "A beautiful mosque",
+                    title: "Mount Uhud",
+                    description: "Uhud is more than a mountain; it is a symbol of love and sacrifice. Here, the Battle of Uhud took place, teaching us lessons of obedience and patience. The Prophet ﷺ said, ‘Uhud loves us, and we love it.’ It is also the resting place of the brave martyrs, including Hamza (RA), reminding us of faith and sacrifice.",
                     image: "assets/4.jpeg"
 
                 },
                 {
-                    title: "Mosque",
-                    description: "The mosque.",
+                    title: "Masjid Quba",
+                    description: "Masjid Quba is the first mosque built in Islam, founded by the Prophet ﷺ in Madinah. It is a place of purity and blessing. The Prophet ﷺ said that whoever performs two rak’ahs here will have the reward of an accepted Umrah. A symbol of simplicity, faith, and sincerity.",
                   image: "assets/5.jpeg"
 
                 },
@@ -130,8 +130,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 
 
                 {
-                    title: "Mosque",
-                    description: "mosque of madina",
+                    title: "Masjid an-Nabawi",
+                    description: "Masjid an-Nabawi is the resting place of our beloved Prophet ﷺ and the second holiest mosque in Islam. Its heart is Riyadh-ul-Jannah (a garden from Paradise). To pray here is a blessing beyond words, and its peace touches every soul that enters.",
                     image: "assets/7.jpeg"
 
                 }
