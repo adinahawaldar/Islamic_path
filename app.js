@@ -505,7 +505,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 number: 4,
-                name: "Ismail (Ishmael)",
+                name: "Ismail",
                 arabic: "إسماعيل عليه السلام",
                 description: "Son of Ibrahim. Showed patience when his father was tested to sacrifice him."
             },
@@ -517,49 +517,49 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 number: 6,
-                name: "Yaqub (Jacob)",
+                name: "Yaqub ",
                 arabic: "يعقوب عليه السلام",
                 description: "Father of the twelve tribes of Bani Isra'il. Remembered for his deep patience (Sabr)."
             },
             {
                 number: 7,
-                name: "Yusuf (Joseph)",
+                name: "Yusuf",
                 arabic: "يوسف عليه السلام",
                 description: "Known for his beauty and honesty. Became a ruler in Egypt after many hardships."
             },
             {
                 number: 8,
-                name: "Musa (Moses)",
+                name: "Musa ",
                 arabic: "موسى عليه السلام",
                 description: "Freed Bani Isra'il from Fir'awn (Pharaoh). Received the Torah from Allah."
             },
             {
                 number: 9,
-                name: "Harun (Aaron)",
+                name: "Harun ",
                 arabic: "هارون عليه السلام",
                 description: "Brother of Musa. Helped him in guiding people."
             },
             {
                 number: 10,
-                name: "Dawud (David)",
+                name: "Dawud ",
                 arabic: "داوود عليه السلام",
                 description: "Given Zabur (Psalms). Known for wisdom and beautiful voice."
             },
             {
                 number: 11,
-                name: "Sulaiman (Solomon)",
+                name: "Sulaiman ",
                 arabic: "سليمان عليه السلام",
                 description: "Son of Dawud. Ruled with justice. Allah gave him control over winds, birds, and jinn."
             },
             {
                 number: 12,
-                name: "Yunus (Jonah)",
+                name: "Yunus ",
                 arabic: "يونس عليه السلام",
                 description: "Swallowed by a big fish. Prayed: 'La ilaha illa anta subhanaka inni kuntu minaz-zalimin.'"
             },
             {
                 number: 13,
-                name: "Ayyub (Job)",
+                name: "Ayyub",
                 arabic: "أيوب عليه السلام",
                 description: "Known for patience during illness. Allah rewarded him for his Sabr."
             },
@@ -571,7 +571,7 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             {
                 number: 15,
-                name: "Yahya (John the Baptist)",
+                name: "Yahya ",
                 arabic: "يحيى عليه السلام",
                 description: "Prophet known for purity and courage. Martyred while calling people to Allah."
             },
@@ -630,4 +630,42 @@ document.addEventListener('DOMContentLoaded', function() {
         document.addEventListener('DOMContentLoaded', () => {
             createProphetCards();
             setupScrollButtons();
+        });
+
+
+         document.addEventListener('DOMContentLoaded', function() {
+            const calculateBtn = document.getElementById('calculateBtn');
+            const wealthInput = document.getElementById('wealth');
+            const resultsDiv = document.getElementById('results');
+            const totalWealthSpan = document.getElementById('totalWealth');
+            const zakatAmountSpan = document.getElementById('zakatAmount');
+            
+            calculateBtn.addEventListener('click', function() {
+                const wealth = parseFloat(wealthInput.value);
+                
+                if (isNaN(wealth) || wealth < 0) {
+                    alert('Please enter a valid wealth amount');
+                    return;
+                }
+                
+                const zakat = wealth * 0.025;
+                
+                totalWealthSpan.textContent = formatCurrency(wealth);
+                zakatAmountSpan.textContent = formatCurrency(zakat);
+                
+                resultsDiv.classList.add('visible');
+            });
+            
+            function formatCurrency(amount) {
+                return amount.toLocaleString('en-US', {
+                    minimumFractionDigits: 2,
+                    maximumFractionDigits: 2
+                });
+            }
+            
+            wealthInput.addEventListener('keyup', function(event) {
+                if (event.key === 'Enter') {
+                    calculateBtn.click();
+                }
+            });
         });
