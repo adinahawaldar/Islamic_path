@@ -481,3 +481,153 @@ document.addEventListener('DOMContentLoaded', function() {
                 observer.observe(section);
             });
         });
+
+
+
+        const prophets = [
+            {
+                number: 1,
+                name: "Adam (Adam)",
+                arabic: "آدم عليه السلام",
+                description: "The first human and the first Prophet. Taught people about Allah as the Creator."
+            },
+            {
+                number: 2,
+                name: "Nuh (Noah)",
+                arabic: "نوح عليه السلام",
+                description: "Called people to worship only Allah. Built the Ark during the great flood."
+            },
+            {
+                number: 3,
+                name: "Ibrahim (Abraham)",
+                arabic: "إبراهيم عليه السلام",
+                description: "Known as Khalilullah (Friend of Allah). Tested with fire, but Allah saved him. Built the Kaaba with his son Ismail."
+            },
+            {
+                number: 4,
+                name: "Ismail (Ishmael)",
+                arabic: "إسماعيل عليه السلام",
+                description: "Son of Ibrahim. Showed patience when his father was tested to sacrifice him."
+            },
+            {
+                number: 5,
+                name: "Ishaq (Isaac)",
+                arabic: "إسحاق عليه السلام",
+                description: "Son of Ibrahim. Continued teaching about Tawheed (oneness of Allah)."
+            },
+            {
+                number: 6,
+                name: "Yaqub (Jacob)",
+                arabic: "يعقوب عليه السلام",
+                description: "Father of the twelve tribes of Bani Isra'il. Remembered for his deep patience (Sabr)."
+            },
+            {
+                number: 7,
+                name: "Yusuf (Joseph)",
+                arabic: "يوسف عليه السلام",
+                description: "Known for his beauty and honesty. Became a ruler in Egypt after many hardships."
+            },
+            {
+                number: 8,
+                name: "Musa (Moses)",
+                arabic: "موسى عليه السلام",
+                description: "Freed Bani Isra'il from Fir'awn (Pharaoh). Received the Torah from Allah."
+            },
+            {
+                number: 9,
+                name: "Harun (Aaron)",
+                arabic: "هارون عليه السلام",
+                description: "Brother of Musa. Helped him in guiding people."
+            },
+            {
+                number: 10,
+                name: "Dawud (David)",
+                arabic: "داوود عليه السلام",
+                description: "Given Zabur (Psalms). Known for wisdom and beautiful voice."
+            },
+            {
+                number: 11,
+                name: "Sulaiman (Solomon)",
+                arabic: "سليمان عليه السلام",
+                description: "Son of Dawud. Ruled with justice. Allah gave him control over winds, birds, and jinn."
+            },
+            {
+                number: 12,
+                name: "Yunus (Jonah)",
+                arabic: "يونس عليه السلام",
+                description: "Swallowed by a big fish. Prayed: 'La ilaha illa anta subhanaka inni kuntu minaz-zalimin.'"
+            },
+            {
+                number: 13,
+                name: "Ayyub (Job)",
+                arabic: "أيوب عليه السلام",
+                description: "Known for patience during illness. Allah rewarded him for his Sabr."
+            },
+            {
+                number: 14,
+                name: "Zakariya (Zechariah)",
+                arabic: "زكريا عليه السلام",
+                description: "Made dua for a child. Father of Yahya."
+            },
+            {
+                number: 15,
+                name: "Yahya (John the Baptist)",
+                arabic: "يحيى عليه السلام",
+                description: "Prophet known for purity and courage. Martyred while calling people to Allah."
+            },
+            {
+                number: 16,
+                name: "Isa (Jesus)",
+                arabic: "عيسى عليه السلام",
+                description: "Born miraculously to Maryam (Mary). Performed miracles by Allah's permission. Brought the Injil (Gospel)."
+            },
+            {
+                number: 17,
+                name: "Muhammad",
+                arabic: "مُحَمَّد ﷺ",
+                description: "The final Prophet and Messenger. Sent with the Qur'an for all mankind. Known as Rahmatan lil-'Alameen (Mercy to the worlds)."
+            }
+        ];
+
+        function createProphetCards() {
+            const timeline = document.querySelector('.timeline');
+            
+            prophets.forEach(prophet => {
+                const card = document.createElement('div');
+                card.className = 'prophet-card';
+                
+                card.innerHTML = `
+                    <div class="number">${prophet.number}</div>
+                    <div class="name-arabic">${prophet.arabic}</div>
+                    <div class="name">${prophet.name}</div>
+                    <div class="description">${prophet.description}</div>
+                `;
+                
+                timeline.appendChild(card);
+            });
+        }
+
+        function setupScrollButtons() {
+            const timelineContainer = document.querySelector('.timeline-container');
+            const scrollLeftButton = document.getElementById('scrollLeft');
+            const scrollRightButton = document.getElementById('scrollRight');
+            
+            scrollLeftButton.addEventListener('click', () => {
+                timelineContainer.scrollBy({
+                    left: -300,
+                    behavior: 'smooth'
+                });
+            });
+            
+            scrollRightButton.addEventListener('click', () => {
+                timelineContainer.scrollBy({
+                    left: 300,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            createProphetCards();
+            setupScrollButtons();
+        });
