@@ -3,7 +3,7 @@
 > A collection of **Islamic stories, Prophets’ timeline, and educational resources** — built for learning and sharing.  
 > From **Adam عليه السلام** to **Muhammad ﷺ**, with inspiring lessons, simple storytelling, and authentic references.  
 
-![Bismillah](https://upload.wikimedia.org/wikipedia/commons/6/6a/Bismillah.svg)
+![Demo Screenshot](assets/image.png)
 
 ---
 
@@ -73,4 +73,5 @@ It is free for anyone to use, modify, and share for the sake of spreading benefi
 
 ###  Made with sincerity & Love for Islam  
 ⭐ Fork, star, and contribute to spread knowledge!  
+
 
