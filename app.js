@@ -92,28 +92,51 @@ document.addEventListener('DOMContentLoaded', function() {
             const galleryItems = [
                 {
                     title: "Masjid al-Haram, Mecca",
-                    description: "The Great Mosque of Mecca with the Kaaba at its center."
+                    description: "The Great Mosque of Mecca with the Kaaba at its center.",
+                            image: "assets/makkah.jpeg"
+
                 },
                 {
                     title: "The Prophet's Mosque, Medina",
-                    description: "Al-Masjid an-Nabawi, the second holiest mosque in Islam."
+                    description: "Al-Masjid an-Nabawi, the second holiest mosque in Islam.",
+                            image: "assets/madina.jpeg"
+
                 },
                 {
-                    title: "Historical site of the Battle of Uhud",
-                    description: "Mount Uhud where the famous battle took place in Islamic history."
+                    title: "Mosque",
+                    description: "Al-Masjid an-Nabawi",
+                    image: "assets/3.jpeg"
+
                 },
                 {
-                    title: "The Holy Quran in Medina",
-                    description: "A beautifully adorned copy of the Holy Quran."
+                    title: "Mosque",
+                    description: "A beautiful mosque",
+                    image: "assets/4.jpeg"
+
                 },
                 {
-                    title: "Date palms in Medina",
-                    description: "The date palms that Medina is famous for."
+                    title: "Mosque",
+                    description: "The mosque.",
+                  image: "assets/5.jpeg"
+
                 },
                 {
-                    title: "Traditional Islamic calligraphy and patterns",
-                    description: "Intricate Islamic art showcasing traditional patterns."
+                    title: "Clock Towe in Makkah",
+                    description: "The Makkah Clock Tower, part of the Abraj Al-Bait complex, is one of the tallest buildings in the world. Overlooking the Masjid al-Haram, it features the world’s largest clock face and serves as a symbol of modernity alongside Islam’s holiest site.",
+                     image: "assets/6.jpeg"
+
+                },
+
+                
+
+                {
+                    title: "Mosque",
+                    description: "mosque of madina",
+                    image: "assets/7.jpeg"
+
                 }
+
+
             ];
             
             const galleryItemsElements = document.querySelectorAll('.gallery-item');
@@ -163,9 +186,11 @@ document.addEventListener('DOMContentLoaded', function() {
                 const item = galleryItems[currentIndex];
                 modalCaption.textContent = item.title + " - " + item.description;
                 
-                modalImage.src = "";
+                modalImage.src = item.image;
                 modalImage.alt = item.title;
-                
+                modalImage.style.background = "none";
+    modalImage.style.width = "600px";
+    modalImage.style.height = "auto"; 
                 const colors = [
                     'linear-gradient(135deg, #1a3a4a 0%, #2a6e50 100%)',
                     'linear-gradient(135deg, #d9b44a 0%, #2a6e50 100%)',
