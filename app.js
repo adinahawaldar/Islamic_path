@@ -313,7 +313,323 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+const tasbeehData = [
+            {
+                name: "SubhanAllah",
+                meaning: "Glory be to Allah",
+                benefit: "Brings peace, light in the heart, and forgiveness",
+                when: "Anytime, especially after prayer",
+                category: "Daily Dhikr",
+                count: 0
+            },
+            {
+                name: "Alhamdulillah",
+                meaning: "All praise is for Allah",
+                benefit: "Increases blessings and gratitude in life",
+                when: "Anytime, especially after eating or when pleased",
+                category: "Daily Dhikr",
+                count: 0
+            },
+            {
+                name: "Allahu Akbar",
+                meaning: "Allah is the Greatest",
+                benefit: "Reminds us of Allah's greatness and reduces worldly worries",
+                when: "Anytime, especially during prayer and difficulties",
+                category: "Daily Dhikr",
+                count: 0
+            },
+            {
+                name: "Astaghfirullah",
+                meaning: "I seek forgiveness from Allah",
+                benefit: "Wipes away sins, brings barakah in life",
+                when: "Anytime, especially after sin",
+                category: "Forgiveness",
+                count: 0
+            },
+            {
+                name: "Ya Tawwab",
+                meaning: "O Acceptor of Repentance",
+                benefit: "Helps in seeking sincere repentance and turning back to Allah",
+                when: "After committing sins or mistakes",
+                category: "Forgiveness",
+                count: 0
+            },
+            {
+                name: "Ya Ghaffar",
+                meaning: "O Forgiver",
+                benefit: "Seeks Allah's forgiveness and mercy",
+                when: "When seeking pardon for sins",
+                category: "Forgiveness",
+                count: 0
+            },
+            {
+                name: "Ya Shafi",
+                meaning: "O Healer",
+                benefit: "Seeks healing from illnesses and diseases",
+                when: "During illness or visiting the sick",
+                category: "Healing & Peace",
+                count: 0
+            },
+            {
+                name: "Ya Salaam",
+                meaning: "O Source of Peace",
+                benefit: "Brings peace to the heart and protection from worries",
+                when: "During times of stress and anxiety",
+                category: "Healing & Peace",
+                count: 0
+            },
+            {
+                name: "Ya Latif",
+                meaning: "The Subtle, The Kind",
+                benefit: "Resolves problems in gentle ways and eases difficulties",
+                when: "When facing difficult situations",
+                category: "Healing & Peace",
+                count: 0
+            },
+            {
+                name: "Ya Hafiz",
+                meaning: "The Protector",
+                benefit: "Seeks Allah's protection from all harm",
+                when: "When feeling fearful or in danger",
+                category: "Protection",
+                count: 0
+            },
+            {
+                name: "Ya Qawiyy",
+                meaning: "The All-Strong",
+                benefit: "Seeks strength and steadfastness in faith",
+                when: "When feeling weak or facing challenges",
+                category: "Protection",
+                count: 0
+            },
+            {
+                name: "Ya Matin",
+                meaning: "The Firm, The Steadfast",
+                benefit: "Provides firmness and determination",
+                when: "When needing perseverance",
+                category: "Protection",
+                count: 0
+            },
+            
+            
+            {
+                name: "La ilaha illallah",
+                meaning: "There is no god but Allah",
+                benefit: "Foundation of faith, great reward",
+                when: "Anytime, especially morning and evening",
+                category: "Daily Dhikr",
+                count: 0
+            },
+            {
+                name: "SubhanAllahi wa bihamdihi",
+                meaning: "Glory be to Allah and all praise is for Him",
+                benefit: "Heavy on scale, loved by Allah",
+                when: "Morning and evening",
+                category: "Daily Dhikr",
+                count: 0
+            },
+            {
+                name: "Ya Razzaq",
+                meaning: "The Provider",
+                benefit: "Seeks sustenance and provision",
+                when: "When in need of provision",
+                category: "Special Occasions",
+                count: 0
+            },
+            {
+                name: "Ya Wahhab",
+                meaning: "The Bestower",
+                benefit: "Seeks gifts and blessings from Allah",
+                when: "When asking for Allah's gifts",
+                category: "Special Occasions",
+                count: 0
+            },
+            {
+                name: "Hasbunallah wa ni'mal Wakeel",
+                meaning: "Allah is sufficient for us and He is the best Disposer of affairs",
+                benefit: "Relieves worries and anxieties",
+                when: "During times of difficulty",
+                category: "Healing & Peace",
+                count: 0
+            },
+            {
+                name: "La hawla wa la quwwata illa billah",
+                meaning: "There is no power nor strength except by Allah",
+                benefit: "Admission of weakness and reliance on Allah",
+                when: "When facing difficulties",
+                category: "Protection",
+                count: 0
+            },
+            {
+                name: "Ya Karim",
+                meaning: "The Generous",
+                benefit: "Seeks generosity and blessings",
+                when: "When asking for Allah's bounty",
+                category: "Special Occasions",
+                count: 0
+            },
+            {
+                name: "Ya Mughni",
+                meaning: "The Enricher",
+                benefit: "Seeks enrichment from Allah",
+                when: "When in need",
+                category: "Special Occasions",
+                count: 0
+            },
+            {
+                name: "Ya Wadud",
+                meaning: "The Loving",
+                benefit: "Seeks Allah's love and to love for His sake",
+                when: "When seeking love and harmony",
+                category: "Healing & Peace",
+                count: 0
+            },
+            {
+                name: "Ya Hakim",
+                meaning: "The Wise",
+                benefit: "Seeks wisdom in affairs",
+                when: "When needing guidance in decisions",
+                category: "Healing & Peace",
+                count: 0
+            },
+            {
+                name: "Ya Sabur",
+                meaning: "The Patient",
+                benefit: "Seeks patience in difficulties",
+                when: "During trials and tribulations",
+                category: "Healing & Peace",
+                count: 0
+            },
+            {
+                name: "Ya Fattah",
+                meaning: "The Opener",
+                benefit: "Seeks opening of doors and solutions",
+                when: "When facing closed doors",
+                category: "Special Occasions",
+                count: 0
+            },
+            {
+                name: "Ya Basir",
+                meaning: "The All-Seeing",
+                benefit: "Reminds us Allah sees all our actions",
+                when: "When needing mindfulness",
+                category: "Protection",
+                count: 0
+            },
+            {
+                name: "Ya Aliym",
+                meaning: "The All-Knowing",
+                benefit: "Reminds us Allah knows everything",
+                when: "When seeking knowledge",
+                category: "Protection",
+                count: 0
+            },
+            
+            
+        ];
 
+        let currentPage = 1;
+        const itemsPerPage = 6;
+        let filteredTasbeehs = [...tasbeehData];
+
+        function renderTasbeehs() {
+            const startIndex = (currentPage - 1) * itemsPerPage;
+            const endIndex = startIndex + itemsPerPage;
+            const tasbeehsToRender = filteredTasbeehs.slice(0, endIndex);
+            
+            const tasbeehGrid = document.getElementById('tasbeehGrid');
+            tasbeehGrid.innerHTML = '';
+            
+            tasbeehsToRender.forEach(tasbeeh => {
+                const card = document.createElement('div');
+                card.className = 'tasbeeh-card';
+                card.innerHTML = `
+                    <div class="card-header">
+                        <h3>${tasbeeh.name}</h3>
+                    </div>
+                    <div class="card-body">
+                        <div class="meaning">${tasbeeh.meaning}</div>
+                        <div class="benefit">${tasbeeh.benefit}</div>
+                        <div class="when"><strong>When:</strong> ${tasbeeh.when}</div>
+                    </div>
+                    <div class="card-footer">
+                        <div class="counter">
+                            <button class="count-btn" onclick="decrementCount('${tasbeeh.name}')">-</button>
+                            <span class="count-display" id="count-${tasbeeh.name}">${tasbeeh.count}</span>
+                            <button class="count-btn" onclick="incrementCount('${tasbeeh.name}')">+</button>
+                        </div>
+                        <button class="reset-btn" onclick="resetCount('${tasbeeh.name}')">Reset</button>
+                    </div>
+                `;
+                tasbeehGrid.appendChild(card);
+            });
+            
+            const loadMoreBtn = document.getElementById('loadMore');
+            if (endIndex >= filteredTasbeehs.length) {
+                loadMoreBtn.style.display = 'none';
+            } else {
+                loadMoreBtn.style.display = 'block';
+            }
+        }
+
+        function incrementCount(name) {
+            const tasbeeh = tasbeehData.find(t => t.name === name);
+            if (tasbeeh) {
+                tasbeeh.count++;
+                document.getElementById(`count-${name}`).textContent = tasbeeh.count;
+            }
+        }
+
+        function decrementCount(name) {
+            const tasbeeh = tasbeehData.find(t => t.name === name);
+            if (tasbeeh && tasbeeh.count > 0) {
+                tasbeeh.count--;
+                document.getElementById(`count-${name}`).textContent = tasbeeh.count;
+            }
+        }
+
+        function resetCount(name) {
+            const tasbeeh = tasbeehData.find(t => t.name === name);
+            if (tasbeeh) {
+                tasbeeh.count = 0;
+                document.getElementById(`count-${name}`).textContent = tasbeeh.count;
+            }
+        }
+
+        function loadMore() {
+            currentPage++;
+            renderTasbeehs();
+        }
+
+        function filterByCategory(category) {
+            if (category === 'All') {
+                filteredTasbeehs = [...tasbeehData];
+            } else {
+                filteredTasbeehs = tasbeehData.filter(t => t.category === category);
+            }
+            currentPage = 1;
+            renderTasbeehs();
+            
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                if (btn.textContent === category) {
+                    btn.classList.add('active');
+                } else {
+                    btn.classList.remove('active');
+                }
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            renderTasbeehs();
+            
+            document.querySelectorAll('.category-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    filterByCategory(this.textContent);
+                });
+            });
+            
+            document.getElementById('loadMore').addEventListener('click', loadMore);
+        });
 
 
 
