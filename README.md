@@ -8,12 +8,6 @@
 
 ## 📖 About  
 This project is an **open-source Islamic educational hub**.  
-My aim is to make Islamic knowledge:  
-- 📚 Simple & easy to understand  
-- 🧒 Kid-friendly & beginner-friendly  
-- 🌍 Accessible worldwide  
-- 💻 Available in digital form (website / app)  
-
 It includes:  
 - ✅ **Prophets’ Timeline**  
 - ✅ **Short Islamic Stories**  
@@ -62,6 +56,7 @@ It is free for anyone to use, modify, and share for the sake of spreading benefi
 
 ###  Made with sincerity & Love for Islam  
 ⭐ Fork, star, and contribute to spread knowledge!  
+
 
 
 
